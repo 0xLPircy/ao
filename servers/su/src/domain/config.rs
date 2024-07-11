@@ -47,6 +47,10 @@ impl AoConfig {
             Ok(val) => val.parse().unwrap(),
             Err(_e) => 10,
         };
+        let su_data_dir= match env::var("SU_DATA_DIR") {
+            Ok(val) => val,
+            Err(_e) => "./tmp",
+        };
         Ok(AoConfig {
             database_url: env::var("DATABASE_URL")?,
             database_read_url,

@@ -4,3 +4,4 @@
 .env.router
 .wallet.json
 .schedulers.json
+./tmp
